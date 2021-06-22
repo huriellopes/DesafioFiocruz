@@ -48,10 +48,10 @@
 ##### Clone este repositório:
 
 ````
-git clone https://github.com/huriellopes/Desafio-BritvicBrasil.git
+git clone https://github.com/huriellopes/DesafioFiocruz.git
 ````
 
-Para baixar o zip: [https://github.com/huriellopes/Desafio-BritvicBrasil/archive/master.zip](https://github.com/huriellopes/Desafio-BritvicBrasil/archive/main.zip)
+Para baixar o zip: [https://github.com/huriellopes/DesafioFiocruz/archive/master.zip](https://github.com/huriellopes/DesafioFiocruz/archive/main.zip)
 
 ## ✔ Executando a aplicação:
 
