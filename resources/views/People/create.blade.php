@@ -10,7 +10,7 @@
         <div class="col-8">
             <h4>Novo Cadastro</h4>
         </div>
-        <div class="col-4 text-left">
+        <div class="col-4 text-right">
             <a href="{{ route('people.index') }}" class="btn btn-outline-primary">
                 Voltar
             </a>
