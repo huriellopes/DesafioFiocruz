@@ -18,11 +18,11 @@ services:
     image: postgres:9.6
     environment:
       POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "senha_desejada"
-      POSTGRES_DB: "nome_banco"
+      POSTGRES_PASSWORD: "YOUR_PASSWORD"
+      POSTGRES_DB: "DATABASE_NAME"
     restart: always
-    ports:
-      - 5432:5432
+#    ports:
+#      - 5432:5432
     networks:
       - benfeitoria_network
 

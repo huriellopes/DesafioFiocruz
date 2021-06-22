@@ -16,8 +16,8 @@ class CreateNationalitiesTable extends Migration
         Schema::create('nationalities', function (Blueprint $table) {
             $table->id();
             $table->char('initials', 2)->comment('siglas');
-            $table->string('description', 200);
-            $table->index(['id', 'initials', 'description', 'created_at']);
+            $table->string('name', 200);
+            $table->index(['id', 'initials', 'name', 'created_at']);
             $table->timestamps();
         });
     }
