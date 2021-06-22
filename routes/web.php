@@ -1,18 +1,25 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\PeopleController;
+use App\Http\Controllers\Api\PeopleController as PeopleApiController;
+use App\Http\Controllers\Api\StateController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+// Redireciona a página para a rota people
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->to('people');
+});
+
+Route::prefix('/')->group(function () {
+    Route::resource('people', PeopleController::class)
+        ->except(['update', 'destroy', 'edit']);
+
+    // Rotas de api
+    Route::prefix('/api')->group(function () {
+        Route::resource('people_api', PeopleApiController::class)
+            ->except(['create', 'show', 'edit', 'update', 'destroy', 'edit']);
+
+        Route::resource('states', StateController::class)
+            ->except(['index', 'create', 'show', 'update', 'destroy', 'edit']);
+    });
 });
