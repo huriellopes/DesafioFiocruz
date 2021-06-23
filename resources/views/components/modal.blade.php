@@ -10,7 +10,7 @@
             <div class="modal-body">
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ __('tradutions.close') }}</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">{{ __('tradutions.close') }}</button>
             </div>
         </div>
     </div>
