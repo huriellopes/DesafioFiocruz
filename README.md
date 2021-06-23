@@ -53,7 +53,7 @@
 git clone https://github.com/huriellopes/DesafioFiocruz.git
 ````
 
-Para baixar o zip: [https://github.com/huriellopes/DesafioFiocruz/archive/master.zip](https://github.com/huriellopes/DesafioFiocruz/archive/main.zip)
+Para baixar o zip: [https://github.com/huriellopes/DesafioFiocruz/archive/main.zip](https://github.com/huriellopes/DesafioFiocruz/archive/main.zip)
 
 ## ✔ Executando a aplicação:
 
