@@ -40,7 +40,7 @@ class StateController extends Controller
     {
         try {
 
-            $state = $this->IStateService->findState((int) $this->limpa_tags($request->input('uf')));
+            $state = $this->IStateService->findState((int) $this->clearTags($request->input('uf')));
 
             $params = new stdClass();
             $params->uf = $state->uf;

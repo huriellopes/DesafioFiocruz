@@ -9,4 +9,9 @@ class AcademicLevel extends Model
     protected $table = 'academic_levels';
 
     protected $primaryKey = 'id';
+
+    protected $fillable = [
+        'slug',
+        'name'
+    ];
 }

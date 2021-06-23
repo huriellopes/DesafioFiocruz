@@ -7,8 +7,8 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <x-menu name="Inicio" :route="route('people.index')"/>
-                <x-menu name="Novo Cadastro" :route="route('people.create')"/>
+                <x-menu name="{{ __('tradutions.home') }}" :route="route('people.index')"/>
+                <x-menu name="{{ __('tradutions.new_register') }}" :route="route('people.create')"/>
             </ul>
         </div>
     </div>

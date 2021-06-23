@@ -3,6 +3,7 @@
 namespace App\Http\Resources\People;
 
 use App\Traits\Utils;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class PeopleResource extends JsonResource
@@ -12,20 +13,20 @@ class PeopleResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  Request  $request
      * @return array
      */
-    public function toArray($request)
+    public function toArray($request) : array
     {
         return [
             'id' => $this->id,
-            'name' => strtoupper($this->name),
-            'cpf' => $this->cpf ? $this->pontuacao_cpf_cnpj($this->cpf) : '-',
+            'name' => $this->getFirstName($this->name),
+            'cpf' => $this->cpf ? $this->maskCpfCnpj($this->cpf) : '-',
             'uf' => $this->states ? $this->states->uf : '-',
             'city' => $this->city ? $this->city : '-',
-            'birth' => $this->formata_data($this->birth),
+            'birth' => $this->dateFormat($this->birth),
             'academic_level' => $this->academicLevels->name,
-            'created_at' => $this->formata_data_hora($this->created_at)
+            'created_at' => $this->dateTimeFormat($this->created_at)
         ];
     }
 }

@@ -22,12 +22,14 @@ class StateService implements IStateService
     protected $StateValidate;
 
     /**
-     * StatesService constructor.
+     * StateService constructor.
      * @param IStateRepository $IStateRepository
+     * @param StateValidate $StateValidate
      */
-    public function __construct(IStateRepository $IStateRepository)
+    public function __construct(IStateRepository $IStateRepository, StateValidate $StateValidate)
     {
         $this->IStatesRepository = $IStateRepository;
+        $this->StateValidate = $StateValidate;
     }
 
     /**
@@ -45,10 +47,10 @@ class StateService implements IStateService
      */
     public function searchCity(stdClass $params)
     {
-//        $this->getStateValidate()->validaParametros($params);
+        $this->getStateValidate()->validaParametros($params);
 
         $response = Http::get(
-            "https://servicodados.ibge.gov.br/api/v1/localidades/estados/{$params->uf}/municipios"
+            config('services.county.url')."{$params->uf}/municipios"
         );
 
         return $response->json();
@@ -66,7 +68,7 @@ class StateService implements IStateService
     /**
      * @return StateValidate
      */
-    private function getStateValidate()
+    private function getStateValidate() : StateValidate
     {
         return $this->StateValidate;
     }

@@ -63,6 +63,7 @@ const Functions = function () {
             errorElement: "div",
             validClass: 'is-valid',
             errorClass: 'is-invalid',
+            focusInvalid: true,
             errorPlacement: function (error, element) {
                 error.addClass( "invalid-feedback");
                 error.insertAfter(element);

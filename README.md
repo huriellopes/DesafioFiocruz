@@ -38,7 +38,9 @@
 - Date Fns
 - Jquery Mask
 - Sweet Alert
-- Docker  
+- Docker
+- API do IBGE (para consultar os munícipios)
+- Laravel Debugar
 - PostgreSQL
 
 ## ⚡ Mão na massa:

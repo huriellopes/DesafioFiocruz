@@ -18,13 +18,13 @@ class NationalitySeeder extends Seeder
         DB::table('nationalities')->insert([
             [
                 'initials' => 'E',
-                'description' => 'Estrangeiro',
+                'name' => 'Estrangeiro',
                 'updated_at' => Carbon::now(),
                 'created_at' => Carbon::now(),
             ],
             [
                 'initials' => 'BR',
-                'description' => 'Brasileiro',
+                'name' => 'Brasileiro',
                 'updated_at' => Carbon::now(),
                 'created_at' => Carbon::now(),
             ]

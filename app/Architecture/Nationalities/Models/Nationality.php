@@ -9,4 +9,9 @@ class Nationality extends Model
     protected $table = 'nationalities';
 
     protected $primaryKey = 'id';
+
+    protected $fillable = [
+        'initials',
+        'name'
+    ];
 }

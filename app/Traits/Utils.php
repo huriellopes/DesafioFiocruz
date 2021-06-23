@@ -3,6 +3,7 @@
 namespace App\Traits;
 
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 
 trait Utils
 {
@@ -10,7 +11,7 @@ trait Utils
      * @param $variavel
      * @return string|string[]|null
      */
-    public function limpa_tags($variavel)
+    public function clearTags($variavel)
     {
         return preg_replace('(<(/?[^\>]+)>)', '', $variavel);
     }
@@ -20,7 +21,7 @@ trait Utils
      * @param string $formato
      * @return string
      */
-    public function formata_data_hora($value, $formato = 'd/m/Y H:i:s'): string
+    public function dateTimeFormat($value, $formato = 'd/m/Y H:i:s'): string
     {
         if ($value) {
             return Carbon::parse($value)->format($formato);
@@ -34,7 +35,7 @@ trait Utils
      * @param string $formato
      * @return string
      */
-    public function formata_data($value, $formato = 'd/m/Y'): string
+    public function dateFormat($value, $formato = 'd/m/Y'): string
     {
         if ($value) {
             return Carbon::parse($value)->format($formato);
@@ -47,7 +48,7 @@ trait Utils
      * @param $nu_cpf_cnpj
      * @return string|string[]|null
      */
-    public function pontuacao_cpf_cnpj($nu_cpf_cnpj)
+    public function maskCpfCnpj($nu_cpf_cnpj)
     {
         if (strlen($nu_cpf_cnpj) > 11)
         {
@@ -61,12 +62,25 @@ trait Utils
      * @param $valor
      * @return string|string[]|null
      */
-    public function limpar_mascara($valor)
+    public function clearMask($valor)
     {
         if (!empty($valor)){
             $valor =  preg_replace('/\D+/', '', $valor);
         }
 
         return $valor;
+    }
+
+    /**
+     * @param string $fullName
+     * @return string
+     */
+    public function getFirstName(string $fullName) : string
+    {
+        $name = explode(' ', $fullName);
+        $firstName = array_shift($name);
+        $lastName = array_pop($name);
+
+        return ucfirst(Str::lower($firstName)) . ' ' .ucfirst(Str::lower($lastName)) ?? '';
     }
 }

@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Architecture\People\Models\People;
+use App\Exceptions\SystemException;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -35,6 +37,8 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        parent::boot();
+
         $this->configureRateLimiting();
 
         $this->routes(function () {
@@ -49,6 +53,10 @@ class RouteServiceProvider extends ServiceProvider
         });
 
         Route::pattern('people', '[0-9]+');
+
+        Route::bind('people', function ($value) {
+            return People::where('id', '=', $value)->first() ?? abort(404);
+        });
     }
 
     /**

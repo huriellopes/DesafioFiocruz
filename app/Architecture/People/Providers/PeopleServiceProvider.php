@@ -6,7 +6,6 @@ use App\Architecture\People\Interfaces\IPeopleRepository;
 use App\Architecture\People\Interfaces\IPeopleService;
 use App\Architecture\People\Repositories\PeopleRepository;
 use App\Architecture\People\Services\PeopleService;
-use App\Rules\Cpf;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
 

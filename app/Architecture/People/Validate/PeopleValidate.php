@@ -7,12 +7,12 @@ use App\Architecture\Validate;
 class PeopleValidate extends Validate
 {
     protected $rules = [
-        'nationality_id' => 'required|integer',
+        'nationality_id' => 'required|in:1,2',
         'name' => 'required|string|max:200',
-        'cpf' => 'string|max:14|validacpf|required_if:nationality_id,2',
+        'cpf' => 'required_if:nationality_id,2',
         'birth' => 'required',
-        'state_id' => 'integer|required_if:nationality_id,2',
-        'city' => 'string|required_if:nationality_id,2',
+        'state_id' => 'required_if:nationality_id,2',
+        'city' => 'required_if:nationality_id,2',
         'academic_id' => 'required|integer'
     ];
 }

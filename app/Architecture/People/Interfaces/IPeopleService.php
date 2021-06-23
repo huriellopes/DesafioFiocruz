@@ -14,6 +14,12 @@ interface IPeopleService
     public function list() : Collection;
 
     /**
+     * @param string $cpf
+     * @return People|null
+     */
+    public function getPeopleInCPF(string $cpf) :? People;
+
+    /**
      * @param stdClass $params
      * @return People
      */

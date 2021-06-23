@@ -59,9 +59,4 @@ class PeopleController extends Controller
         $states = $this->IStateService->listSates();
         return view($this->viewPath.'create', compact('nationalities', 'academiclevels', 'states'));
     }
-
-    public function show(People $people)
-    {
-        return view($this->viewPath.'show', compact('people'));
-    }
 }

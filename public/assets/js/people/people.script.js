@@ -1,81 +1,54 @@
 const PeopleScripts = function () {
 
-    // let nationality = $('input[name=nationality_id]:checked').val()
-    //
-    // let rules, messages
-    //
-    // if (nationality === '1') {
-    //     rules = {
-    //         name: {
-    //             required: true
-    //         },
-    //         birth: {
-    //             required: true,
-    //         },
-    //         academic_levels: {
-    //             required: true,
-    //         }
-    //     }
-    //
-    //     messages = {
-    //         name: {
-    //             required: 'O campo Nome Completo é obrigatório.',
-    //         },
-    //         birth: {
-    //             required: 'O campo Data de Nascimento é obrigatório.',
-    //         },
-    //         academic_levels: {
-    //             required: 'O campo Nível Acadêmico é obrigatório.',
-    //         }
-    //     }
-    // } else {
-    //     rules = {
-    //         name: {
-    //             required: true,
-    //         },
-    //         cpf: {
-    //             required: true,
-    //             validaCpf: true,
-    //         },
-    //         uf: {
-    //             required: true,
-    //         },
-    //         city: {
-    //             required: true,
-    //         },
-    //         birth: {
-    //             required: true,
-    //         },
-    //         academic_levels: {
-    //             required: true,
-    //         }
-    //     }
-    //
-    //     messages = {
-    //         name: {
-    //             required: 'O campo Nome Completo é obrigatório.',
-    //         },
-    //         cpf: {
-    //             required: 'O campo CPF é obrigatório.',
-    //         },
-    //         uf: {
-    //             required: 'O campo UF é obrigatório.',
-    //         },
-    //         city: {
-    //             required: 'O campo Munícipio é obrigatório.',
-    //         },
-    //         birth: {
-    //             required: 'O campo Data de Nascimento é obrigatório.',
-    //         },
-    //         academic_levels: {
-    //             required: 'O campo Nível Acadêmico é obrigatório.',
-    //         }
-    //     }
-    // }
+    const form = $('form[name=cadastro]')
 
-    let rules = {}
+    let rules = {
+        name: {
+            required: true,
+        },
+        cpf: {
+            required: function () {
+                return form.find('input[name=nationality_id]:checked').val() === '2'
+            },
+        },
+        state_id: {
+            required: function () {
+                return form.find('input[name=nationality_id]:checked').val() === '2'
+            },
+        },
+        city: {
+            required: function () {
+                return form.find('input[name=nationality_id]:checked').val() === '2'
+            },
+        },
+        birth: {
+            required: true,
+        },
+        academic_id: {
+            required: true,
+        }
+    }
 
-    let messages = {}
+    messages = {
+        name: {
+            required: 'O campo Nome Completo é obrigatório.',
+        },
+        cpf: {
+            required: 'O campo CPF é obrigatório.',
+        },
+        state_id: {
+            required: 'O campo UF é obrigatório.',
+        },
+        city: {
+            required: 'O campo Munícipio é obrigatório.',
+        },
+        birth: {
+            required: 'O campo Data de Nascimento é obrigatório.',
+        },
+        academic_id: {
+            required: 'O campo Nível Acadêmico é obrigatório.',
+        }
+    }
 
     $.validator.addMethod("validaCpf", function (value, element) {
         const cpf = value.replace(/[^\d]+/g, '');

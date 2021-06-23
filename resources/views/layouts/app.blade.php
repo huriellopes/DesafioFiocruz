@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('/assets/css/dataTables.bootstrap5.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('/assets/css/sweetalert.min.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     @yield('css')
 </head>
 <body>
@@ -21,6 +22,7 @@
     <script src="{{ asset('/assets/js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('/assets/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('/assets/js/dataTables.bootstrap5.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/date_fns.min.js') }}"></script>
     <script src="{{ asset('/assets/js/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('/assets/js/additional-methods.min.js') }}"></script>
     <script src="{{ asset('/assets/js/messages_pt_BR.min.js') }}"></script>
@@ -29,9 +31,9 @@
     <script src="{{ asset('/assets/js/popper.min.js') }}"></script>
     <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('/assets/js/axios.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/date_fns.min.js') }}"></script>
     <script src="{{ asset('/assets/js/sweetalert.min.js') }}"></script>
     <script src="{{ asset('/assets/js/functions.js') }}?v={{ time() }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     @yield('js')
 </body>
 </html>

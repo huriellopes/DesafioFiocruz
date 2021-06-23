@@ -36,17 +36,17 @@ class PeopleRepository implements IPeopleRepository
      */
     public function store(stdClass $params): People
     {
-        if ($this->getPeopleInCPF($params->cpf)) {
+        if (!empty($params->cpf) && $this->getPeopleInCPF($params->cpf)) {
             throw new SystemException('O cpf informado, já é existente no sistema.',400);
         }
 
         $people = new People();
         $people->nationality_id = $params->nationality_id;
         $people->name = $params->name;
-        $people->cpf = $params->cpf;
+        $people->cpf = !empty($params->cpf) ? $params->cpf : NULL;
         $people->birth = $params->birth;
-        $people->state_id = $params->state_id;
-        $people->city = $params->city;
+        $people->state_id = !empty($params->state_id) ? $params->state_id : NULL;
+        $people->city = !empty($params->city) ? $params->city : NULL;
         $people->academic_id = $params->academic_id;
         $people->save();
 
