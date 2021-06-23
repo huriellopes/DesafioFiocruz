@@ -1,7 +1,8 @@
 <?php
 
+// Translation of words used in the system
 return [
-    'home' => 'Inicio',
+    'home' => 'Início',
     'close' => 'Fechar',
     'new_register' => 'Novo Cadastro',
     'listing' => 'Listagem',

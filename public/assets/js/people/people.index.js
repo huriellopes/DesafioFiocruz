@@ -1,4 +1,5 @@
 const PeopleIndex = function () {
+    // Listing the registers
     let peopleTable = () => {
         let peopleTable = $("#peopleTable").DataTable()
 
@@ -43,6 +44,7 @@ const PeopleIndex = function () {
         })
     }
 
+    // View of record details
     let showPeople = () => {
         $('#peopleshow').on('shown.bs.modal', function (e) {
             let id = $(e.relatedTarget).data('id')
@@ -50,8 +52,9 @@ const PeopleIndex = function () {
 
             let url = `api/people_api/${id}`
 
-            $(this).find('h5.modal-title').text('Detalhes')
+            $(this).find('h5.modal-title').text('Detalhes de Cadastro')
 
+            // Get in data
             request('GET', url, null).then(response => {
 
                 if (response.status === 200) {
