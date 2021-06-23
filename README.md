@@ -58,11 +58,11 @@ Para baixar o zip: [https://github.com/huriellopes/DesafioFiocruz/archive/master
 ## ✔ Executando a aplicação:
 
 ##### Temos duas opções para testar o projeto:
-- Local
-  - Requisitos:
+- **Local**
+  - **Requisitos:**
     - PHP
     - Banco de Dados PostgreSQL  
-  - Para testar no ambiente local, siga o seguinte passo a passo:
+  - **Para testar no ambiente local, siga o seguinte passo a passo:**
     ````
     # Para instalar as dependências do Laravel
     componser install
@@ -92,20 +92,22 @@ Para baixar o zip: [https://github.com/huriellopes/DesafioFiocruz/archive/master
     # Irá executar na seguinte url, abra no navegador
     http://localhost:8000
     ```` 
-- Docker
-    - Requisitos:
-      - Windows 10 PRO/Enterprise:
+- **Docker**
+    - **Requisitos:**
+      - **Windows 10 PRO/Enterprise:**
         - Link: [Instalação](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
           - Para verificar se foi instalado corretamente, rode o seguinte comando:
             ````
             docker version
             ````
-      - Windows 10 Home
+      - **Windows 10 Home**
         - WSL2 + Docker Desktop
-          - [Passo a Passo](https://www.notion.so/Docker-Desktop-WSL-2-fc6af93d3cac4de9a4a185f78c4a9566)
+          - Link: [Passo a Passo](https://www.notion.so/Docker-Desktop-WSL-2-fc6af93d3cac4de9a4a185f78c4a9566)
+        
         - Docker Toolbox
           - Link: [Instalação](https://www.notion.so/Docker-Toolbox-legacy-7234f5f412444cabb70d0270b1ecc01a)
-      - Linux
+        
+      - **Linux**
         - Rode os seguintes comandos:
           ````
           # Comandos para instalar o docker
@@ -127,7 +129,7 @@ Para baixar o zip: [https://github.com/huriellopes/DesafioFiocruz/archive/master
           sudo apt install docker-compose
           ````
     
-    - Para testar no ambiente docker:
+    - **Para testar no ambiente docker:**
     
     ````
     # Copie o arquivo de configuração do docker 
@@ -160,9 +162,9 @@ Para baixar o zip: [https://github.com/huriellopes/DesafioFiocruz/archive/master
     ````
 ## Créditos
 
-Empresa FioCruz Brasília - Pelo desafio proposto [Site da Empresa](https://www.fiocruzbrasilia.fiocruz.br/efg/)
+- Empresa FioCruz Brasília - Pelo desafio proposto [Site da Empresa](https://www.fiocruzbrasilia.fiocruz.br/efg/)
 
 ## Licença
 
-> Este projeto está sob a licença MIT. Veja aqui [License](LICENSE)
+- Este projeto está sob a licença MIT. **Veja aqui** [License](LICENSE)
 
