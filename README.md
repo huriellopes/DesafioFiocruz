@@ -70,6 +70,9 @@ Para baixar o zip: [https://github.com/huriellopes/DesafioFiocruz/archive/master
     # Para copiar o .env.example para .env
     copy .env.example .env ou cp .env.example .env
     
+    # Gere a APP_KEY do Laravel
+    php artisan key:generate
+    
     # configure as seguintes variaveis de ambiente
     DB_CONNECTION=pgsql # default = mysql
     DB_HOST=127.0.0.1 ou localhost
