@@ -27,4 +27,4 @@ services:
       - fiocruz_network
 
 networks:
-  benfeitoria_network:
+  fiocruz_network:

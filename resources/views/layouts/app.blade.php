@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta name="author" content="Huriel Lopes" />
+    <meta name="description" content="Sistema de cadastro de pessoas." />
     <title>Desafio Fiocruz @yield('subtitle')</title>
     <link rel="stylesheet" href="{{ asset('/assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('/assets/css/dataTables.bootstrap5.min.css') }}" />
