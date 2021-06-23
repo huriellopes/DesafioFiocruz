@@ -27,9 +27,11 @@ return [
         'action' => 'Ação',
     ],
     'form' => [
-        'full_name' => '',
+        'full_name' => 'Nome Completo',
         'state' => 'UF',
         'county' => 'Município',
+        'document' => 'CPF',
+        'birth' => 'Data de Nascimento',
         'academic_level' => 'Nível Acadêmico',
         'select_academic_background' => 'Selecione a formação acadêmica',
         'select_the_state' => 'Selecione a UF',

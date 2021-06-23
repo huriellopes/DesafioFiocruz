@@ -30,11 +30,11 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col">
-                        <label for="name" class="col-form-label">{{ __('tradutions.full_name') }}</label>
+                        <label for="name" class="col-form-label">{{ __('tradutions.form.full_name') }}</label>
                         <input type="text" name="name" class="form-control text-uppercase" id="name" required autocomplete="off" />
                     </div>
                     <div class="form-group col-4 cpf" style="display: none;">
-                        <label for="cpf" class="col-form-label">{{ __('tradutions.document') }}</label>
+                        <label for="cpf" class="col-form-label">{{ __('tradutions.form.document') }}</label>
                         <input type="text" name="cpf" class="form-control" id="cpf" autocomplete="off" />
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col">
-                        <label for="birth" class="col-form-label">{{ __('tradutions.birth') }}</label>
+                        <label for="birth" class="col-form-label">{{ __('tradutions.form.birth') }}</label>
                         <input type="text" name="birth" class="form-control" id="birth" required autocomplete="off" />
                     </div>
                     <div class="form-group col">
