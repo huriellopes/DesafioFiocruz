@@ -1,8 +1,13 @@
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-9">
             <p>
                 <strong>{{ __('tradutions.show.nationality') }}: </strong> {{ $people->present()->nationality }}
+            </p>
+        </div>
+        <div class="col-3">
+            <p>
+                <strong>{{ __('tradutions.show.created_at') }}: </strong> {{ $people->present()->formatData['created_at'] }}
             </p>
         </div>
     </div>

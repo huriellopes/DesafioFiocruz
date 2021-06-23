@@ -15,6 +15,7 @@ return [
         'academic_formation' => 'Formação Acadêmica',
         'state' => 'Estado',
         'city' => 'Cidade',
+        'created_at' => 'Data de Criação',
     ],
     'table' => [
         'name' => 'Nome',

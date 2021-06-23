@@ -22,10 +22,16 @@ class CpfController extends Controller
         try {
             $cpf = $this->clearTags($this->clearMask($request->input('cpf')));
 
-            $this->IPeopleService->getPeopleInCPF($cpf);
+            $found = $this->IPeopleService->getPeopleInCPF($cpf);
+
+            if ($found) {
+                return response()->json([
+                    'message' => true,
+                ], 200);
+            }
 
             return response()->json([
-                'message' => true,
+                'message' => false,
             ], 200);
         } catch (Exception $err) {
             report($err);
