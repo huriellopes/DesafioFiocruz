@@ -65,12 +65,6 @@ const People = function () {
     let handleKeyUp = async (e) => {
         let cpf = e.target.value
 
-        // Verifica se o campo cpf está vazio
-        if (cpf === '') {
-            swal('Ops...', 'Informe o cpf.', 'warning')
-            return false;
-        }
-
         try {
             let response = await query(cpf)
 

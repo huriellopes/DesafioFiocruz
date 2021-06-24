@@ -11,8 +11,8 @@ const Functions = function () {
         })
     }
 
-    dateFormat = function (data, format = 'DD/MM/YYYY') {
-        return dateFns.format(data, format, { timeZone: 'America/Sao_Paulo', })
+    dateFormat = function (data, format = 'DD/MM/YYYY', timezone = 'America/Sao_Paulo') {
+        return dateFns.format(data, format, { locale: timezone })
     }
 
     masks = function ($field, $mask) {

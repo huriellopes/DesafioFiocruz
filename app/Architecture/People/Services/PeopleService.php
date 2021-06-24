@@ -23,6 +23,7 @@ class PeopleService implements IPeopleService
     /**
      * PeopleService constructor.
      * @param IPeopleRepository $IPeopleRepository
+     * @param PeopleValidate $PeopleValidate
      */
     public function __construct(IPeopleRepository $IPeopleRepository, PeopleValidate $PeopleValidate)
     {
