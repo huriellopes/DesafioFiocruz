@@ -15,6 +15,12 @@ class PeoplePresenter extends Presenter
      */
     public function formatData() : array
     {
+        if ($this->nationality_id === 1) {
+            $date = $this->dateFormat($this->birth, 'm/d/Y');
+        } else {
+            $date = $this->dateFormat($this->birth);
+        }
+
         $data = [
             'id' => $this->id,
             'name' => $this->getFirstName($this->name),
@@ -22,7 +28,7 @@ class PeoplePresenter extends Presenter
             'cpf' => $this->cpf ? $this->maskCpfCnpj($this->cpf) : '-',
             'uf' => $this->states ? $this->states->name : '-',
             'city' => $this->city ? $this->city : '-',
-            'birth' => $this->dateFormat($this->birth),
+            'birth' => $date,
             'age' => $this->Age($this->birth),
             'academic_level' => $this->academicLevels->name,
             'created_at' => $this->dateTimeFormat($this->created_at)

@@ -43,11 +43,19 @@ class PeopleController extends Controller
     {
         try {
             DB::beginTransaction();
+                $nationality_id = $this->clearTags($request->input('nationality_id'));
+
+                if ($nationality_id === '1') {
+                    $birth = Carbon::createFromFormat('m/d/Y', $this->clearTags($request->input('birth')))->toDateString();
+                } else {
+                    $birth = Carbon::createFromFormat('d/m/Y', $this->clearTags($request->input('birth')))->toDateString();
+                }
+
                 $params = new stdClass();
-                $params->nationality_id = $this->clearTags($request->input('nationality_id'));
+                $params->nationality_id = $nationality_id;
                 $params->name = $this->clearTags(Str::upper($request->input('name')));
                 $params->cpf = $this->clearTags($this->clearMask($request->input('cpf')));
-                $params->birth = Carbon::createFromFormat('d/m/Y', $this->clearTags($request->input('birth')));
+                $params->birth = $birth;
                 $params->state_id = $this->clearTags($request->input('state_id'));
                 $params->city = $this->clearTags($request->input('city'));
                 $params->academic_id = $this->clearTags($request->input('academic_id'));
